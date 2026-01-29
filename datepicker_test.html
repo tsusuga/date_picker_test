@@ -41,8 +41,8 @@
     flatpickr("#date", {
       locale: "ja",
       dateFormat: "Y/m/d",
-      minDate: "2025-01-11",
-      maxDate: "2025-01-24",
+      minDate: "today",
+      maxDate: new Date().fp_incr(14)
     });
     
     // 日時選択
