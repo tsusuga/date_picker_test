@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flatpickr サンプル</title>
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="flatpickr.min.css">
+  <link rel="stylesheet" href="datepicker_style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Flatpickr サンプル</h1>
+    
+    <!-- 基本的な日付選択 -->
+    <div class="date-wrap">
+      <label for="date">日付選択</label>
+      <input id="date" type="text" class="custom-date" placeholder="日付を選択してください">
+    </div>
+    
+    <!-- 日時選択 -->
+    <div class="date-wrap">
+      <label for="datetime">日時選択</label>
+      <input id="datetime" type="text" class="custom-date" placeholder="日時を選択してください">
+    </div>
+    
+    <!-- 範囲選択 -->
+    <div class="date-wrap">
+      <label for="range">期間選択</label>
+      <input id="range" type="text" class="custom-date" placeholder="期間を選択してください">
+    </div>
+  </div>
+
+  <!-- Flatpickr JavaScript -->
+  <script src="flatpickr.min.js"></script>
+  <!-- 日本語ロケール -->
+  <script src="ja.js"></script>
+  
+  <script>
+    // 基本的な日付選択
+    flatpickr("#date", {
+      locale: "ja",
+      dateFormat: "Y/m/d",
+      allowInput: true,
+      minDate: "2025-01-11",
+      maxDate: "2025-01-24"
+    });
+    
+    // 日時選択
+    flatpickr("#datetime", {
+      locale: "ja",
+      enableTime: true,
+      dateFormat: "Y/m/d H:i",
+      time_24hr: true,
+      allowInput: true,
+      minDate: "2025-01-11",
+      maxDate: "2025-01-24"
+    });
+    
+    // 期間選択（範囲選択）
+    flatpickr("#range", {
+      locale: "ja",
+      mode: "range",
+      dateFormat: "Y/m/d",
+      allowInput: true,
+      minDate: "2025-01-11",
+      maxDate: "2025-01-24"
+    });
+  </script>
+</body>
+</html>
