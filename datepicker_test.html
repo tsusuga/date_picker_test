@@ -42,7 +42,8 @@
       locale: "ja",
       dateFormat: "Y/m/d",
       minDate: "today",
-      maxDate: new Date().fp_incr(14)
+      maxDate: new Date().fp_incr(14),
+      disable: ["2026-01-30"],
     });
     
     // 日時選択
@@ -54,7 +55,7 @@
       allowInput: true,
       minDate: "2025-01-11",
       maxDate: "2025-01-24",
-      disableMobile: true
+      disableMobile: true,
     });
     
     // 期間選択（範囲選択）
