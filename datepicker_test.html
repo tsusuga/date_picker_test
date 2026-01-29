@@ -15,19 +15,19 @@
     <!-- 基本的な日付選択 -->
     <div class="date-wrap">
       <label for="date">日付選択</label>
-      <input id="date" type="text" class="custom-date" placeholder="日付を選択してください">
+      <input id="date" type="text" class="custom-date" name="date" placeholder="日付を選択してください">
     </div>
     
     <!-- 日時選択 -->
     <div class="date-wrap">
       <label for="datetime">日時選択</label>
-      <input id="datetime" type="text" class="custom-date" placeholder="日時を選択してください">
+      <input id="datetime" type="datetime-local" class="custom-date" placeholder="日時を選択してください">
     </div>
     
     <!-- 範囲選択 -->
     <div class="date-wrap">
       <label for="range">期間選択</label>
-      <input id="range" type="text" class="custom-date" placeholder="期間を選択してください">
+      <input id="range" type="date" class="custom-date" placeholder="期間を選択してください">
     </div>
   </div>
 
@@ -41,10 +41,8 @@
     flatpickr("#date", {
       locale: "ja",
       dateFormat: "Y/m/d",
-      allowInput: true,
       minDate: "2025-01-11",
       maxDate: "2025-01-24",
-      disableMobile: true
     });
     
     // 日時選択
