@@ -77,15 +77,15 @@
 
 /* 今日の日付 */
 .flatpickr-day.today {
-  background-color: #fee2e2;
-  color: #991b1b;
+  background-color: #e5e7eb;
+  color: #6b7280;
   font-weight: 700;
-  border-color: #ef4444;
+  border-color: #9ca3af;
 }
 
 .flatpickr-day.today:hover {
-  background-color: #fecaca;
-  border-color: #dc2626;
+  background-color: #d1d5db;
+  border-color: #9ca3af;
 }
 
 /* 選択された日付 */
