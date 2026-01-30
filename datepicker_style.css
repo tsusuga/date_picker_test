@@ -12,14 +12,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   border: 1px solid #e5e7eb;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-}
-
-/* 月ヘッダーのスタイル */
-.flatpickr-month {
-  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-  color: white;
-  padding: 12px 0;
-  border-radius: 12px 12px 0 0;
+  overflow: hidden;
 }
 
 .flatpickr-month .flatpickr-current-month {
@@ -28,44 +21,24 @@
   padding: 4px 0;
 }
 
-.flatpickr-month .flatpickr-prev-month,
-.flatpickr-month .flatpickr-next-month {
-  color: white;
-  fill: white;
-  padding: 4px 8px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  fill: #4792E0;
 }
 
-.flatpickr-month .flatpickr-prev-month:hover,
-.flatpickr-month .flatpickr-next-month:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  fill: #84b9f2;
 }
 
 /* 曜日ヘッダーのスタイル */
 .flatpickr-weekdays {
   background-color: #f9fafb;
-  padding: 8px 0;
   border-bottom: 1px solid #e5e7eb;
 }
 
-.flatpickr-weekday {
-  color: #6b7280;
-  font-weight: 600;
-  font-size: 12px;
-  text-transform: uppercase;
-}
-
-/* 日付のスタイル */
-.flatpickr-days {
-  padding: 8px;
-}
-
 .flatpickr-day {
-  border-radius: 8px;
-  font-size: 14px;
   font-weight: 500;
-  transition: all 0.2s;
   border: 2px solid transparent;
 }
 
@@ -89,7 +62,9 @@
 }
 
 /* 選択された日付 */
-.flatpickr-day.selected {
+.flatpickr-day.selected,
+.flatpickr-day.selected.prevMonthDay,
+.flatpickr-day.selected.nextMonthDay {
   background-color: #3D5A8A;
   color: #ffffff;
   font-weight: 700;
