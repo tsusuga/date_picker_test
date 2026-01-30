@@ -15,6 +15,11 @@
   overflow: hidden;
 }
 
+/* 月ヘッダーのスタイル */
+.flatpickr-month {
+  padding: 10px 0;
+}
+
 .flatpickr-month .flatpickr-current-month {
   font-size: 16px;
   font-weight: 600;
@@ -24,6 +29,12 @@
 .flatpickr-months .flatpickr-prev-month,
 .flatpickr-months .flatpickr-next-month {
   fill: #4792E0;
+}
+
+.flatpickr-months .flatpickr-prev-month svg,
+.flatpickr-months .flatpickr-next-month svg {
+  width: 20px;
+  height: 30px;
 }
 
 /* 曜日ヘッダーのスタイル */
